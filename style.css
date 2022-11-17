@@ -3,10 +3,34 @@
 	padding: 0px;
 }
 
+@keyframes up {
+	from {
+		padding-top: 1em;
+		filter: none;
+	}
+	to {
+		padding-top: 0em;
+		filter: invert(100%);
+	}
+}
+
+@keyframes link_colour {
+	from {
+		color: inherit;
+	}
+	to {
+		color: rgba(155,104,176,1);
+	}
+}
+
 table {
 	background: rgb(155,104,176);
-	/* background: linear-gradient(180deg, rgba(155,104,176,1) 0%, rgba(129,47,159,1) 35%, rgba(250,179,255,1) 100%); */
-	background: linear-gradient(180deg, rgba(155,104,176,1) 0%, rgba(149,67,169,1) 35%, rgba(250,179,255,1) 100%);
+	background: linear-gradient(
+		180deg,
+		rgba(155,104,176,1) 0%,
+		rgba(149,67,169,1) 35%,
+		rgba(250,179,255,1) 100%
+	);
 	top-margin: 0px;
 	padding-top: 0px;
 	border-bottom-left-radius: 1em;
@@ -26,8 +50,16 @@ table {
 }
 
 td {
+	height: 6em;
 	padding-left: 5em;
 	padding-right: 5em;
+	padding-top: 1em;
+}
+
+td:hover {
+	animation-name: up;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
 }
 
 .link_image {
@@ -45,6 +77,17 @@ h2 {
 
 li {
 	font-size: 1.5em;
+}
+
+.name:hover {
+	animation-name: link_colour;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+.git:hover {
+	animation-name: link_colour;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
 }
 
 a {

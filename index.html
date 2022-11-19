@@ -46,3 +46,16 @@
 	</li>
 </ul>
 </center>
+
+<script>
+const maybe_hide = document.getElementsByClassName("maybe_hidden");
+const hide =
+	location.host == "u3836.se"
+	|| localStorage.getItem("showHidden") != null;
+
+if (!hide) {
+	for (let element of maybe_hide) {
+		element.style.display = "none";
+	}
+}
+</script>

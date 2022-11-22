@@ -14,6 +14,16 @@
 	}
 }
 
+@keyframes spin {
+	from { transform: rotate3d(0, 1, 0, 0deg); }
+	to { transform: rotate3d(0, 1, 0, 360deg); }
+}
+
+@keyframes spin2 {
+	from { transform: rotate3d(1, 0, 0, 0deg); }
+	to { transform: rotate3d(1, 0, 0, 360deg); }
+}
+
 @keyframes link_colour {
 	from {
 		color: inherit;
@@ -62,6 +72,18 @@ td {
 td:hover {
 	animation-name: up;
 	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+
+td:hover img {
+	animation-name: spin;
+	animation-duration: 0.75s;
+	animation-fill-mode: both;
+}
+
+td:hover div {
+	animation-name: spin;
+	animation-duration: 0.75s;
 	animation-fill-mode: both;
 }
 

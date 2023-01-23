@@ -1,0 +1,23 @@
+.header {
+	width: 100%;
+	background-color: #bbbbbb;
+	color: white;
+}
+.inner-header {
+	margin: 15px;
+	font-family: "Roboto", "Helvetica", sans-serif;
+	font-size: 32px;
+}
+
+td {
+	width: 50%;
+}
+
+table {
+	width: 80%;
+
+}
+
+img {
+	width: 100%;
+}

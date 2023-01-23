@@ -1,23 +1,86 @@
 .header {
+	height: 4em;
 	width: 100%;
-	background-color: #bbbbbb;
-	color: white;
+	background-color: #cccccc;
 }
 .inner-header {
+	width: 100%;
+	height: 100%;
 	margin: 15px;
 	font-family: "Roboto", "Helvetica", sans-serif;
 	font-size: 32px;
+	color: white;
 }
 
-td {
-	width: 50%;
+.line {
+	display: block;
+	font-size: 0px;
 }
 
-table {
-	width: 80%;
-
+.item {
+	background-color: #eeeeee;
+	margin: 0px;
+	height: 100%;
+	display: inline-block;
+}
+.item:hover {
+	background-color: #dddddd;
+}
+.inner-item {
+	font-family: "Roboto", "Helvetica", sans-serif;
+	font-size: 32px;
+	color: black;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
-img {
+.wide {
 	width: 100%;
+	text-align: left;
+}
+.medium {
+	width: 75%;
+	text-align: left;
+}
+.narrow {
+	width: 25%;
+	text-align: center;
+}
+
+.spacing {
+	width: 0px;
+	height: 5%;
+}
+
+div {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+#left {
+	flex-grow: 1;
+}
+
+#right {
+	display: block;
+	object-fit: contain;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.parent {
+	display: flex;
+	width: 80vw;
+}
+
+.child {
+	flex-grow: 1;
+	width: 38vw;
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
 }

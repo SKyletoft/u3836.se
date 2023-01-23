@@ -7,22 +7,33 @@
 		<link rel="stylesheet" type="text/css" href="style3.css" />
 	</head>
 	<body>
-		<center>
-			<table>
-				<tr>
-					<td>
-						<div class="header"><div class="inner-header"><b>Me</b></div></div>
-						<p>word</p>
-						<div class="header"><div class="inner-header"><b>Projects</b></div></div>
-						<p>word</p>
-						<div class="header"><div class="inner-header"><b>Contact</b></div></div>
-						<p>word</p>
-					</td>
-					<td>
-						<img src="cropped.png">
-					</td>
-				</tr>
-			</table>
-		</center>
+		<div class="parent">
+			<div class="child" id="left">
+				<div class="header"><div class="inner-header"><b>Me</b></div></div>
+				<div class="wide item">lorem ipsum</div>
+				<div class="spacing"></div>
+
+				<div class="header"><div class="inner-header"><b>Projects</b></div></div>
+				<div class="line">
+					<div class="medium item"><div class="inner-item">Artemis</div></div>
+					<div class="narrow item"><div class="inner-item">git</div></div>
+				</div>
+				<div class="line">
+					<div class="medium item"><div class="inner-item">Cflisp</div></div>
+					<div class="narrow item"><div class="inner-item">git</div></div>
+				</div>
+				<div class="line">
+					<div class="medium item"><div class="inner-item">MD407 for VSC</div></div>
+					<div class="narrow item"><div class="inner-item">git</div></div>
+				</div>
+				<div class="spacing"></div>
+
+				<div class="header"><div class="inner-header"><b>Contact</b></div></div>
+				<div class="wide item">samuel@kyletoft.se</div>
+			</div>
+			<img class="child" id="right" src="cropped.png" />
+		</div>
 	</body>
 </html>
+
+<script> // setTimeout(() => {window.location.reload(false);}, 500); </script>

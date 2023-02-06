@@ -24,13 +24,28 @@
 	to { transform: rotate3d(1, 0, 0, 360deg); }
 }
 
-@keyframes link_colour {
+@keyframes blink {
+	from {
+		background: rgba(0,0,0,1);
+	}
+	to {
+		background: rgba(0,0,0,0);
+	}
+}
+
+@keyframes link_color {
 	from {
 		color: inherit;
 	}
 	to {
 		color: rgba(155,104,176,1);
 	}
+}
+
+.blink {
+	animation-name: blink;
+	animation-duration: 0.25s;
+	animation-fill-mode: both;
 }
 
 table {
@@ -105,12 +120,12 @@ li {
 }
 
 .name:hover {
-	animation-name: link_colour;
+	animation-name: link_color;
 	animation-duration: 0.5s;
 	animation-fill-mode: both;
 }
 .git:hover {
-	animation-name: link_colour;
+	animation-name: link_color;
 	animation-duration: 0.5s;
 	animation-fill-mode: both;
 }

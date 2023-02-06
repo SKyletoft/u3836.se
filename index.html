@@ -50,14 +50,31 @@
 </center>
 
 <script>
-const maybe_hide = document.getElementsByClassName("maybe_hidden");
-const hide =
-	location.host == "u3836.se"
-	|| localStorage.getItem("showHidden") != null;
+	const body = document.body;
+	const links = Array.from(document.getElementsByTagName("a"))
+		.map(x => {
+			return {text: x.innerText.toLowerCase(), href: x.href};
+		});
+	let input = "";
 
-if (!hide) {
-	for (let element of maybe_hide) {
-		element.style.display = "none";
-	}
-}
+	document.addEventListener("keydown", e => {
+		console.log(e);
+		let key = e.key.toLowerCase();
+		if (key === "backspace") {
+			input = input.substr(0, input.length - 1);
+			if (input === "") {
+				body.classList = [ "not_blink" ];
+				void body.offsetWidth;
+				body.classList = [ "blink" ];
+			}
+		} else if (key.length === 1) {
+			input += e.key;
+		}
+
+		const matches = links.filter(x => x.text.match(input))
+		if (matches.length == 1) {
+			console.log(matches[0].href);
+			location = matches[0].href;
+		}
+	});
 </script>
